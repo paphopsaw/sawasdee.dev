@@ -40,6 +40,9 @@ body {
   h6 {
     @apply text-2xl sm:text-3xl;
   }
+  button {
+    @apply text-xl sm:text-2xl;
+  }
   p {
     @apply text-base;
   }

@@ -1,46 +1,42 @@
 "use client";
+import Github from "@/assets/icons/github";
+import Linkedin from "@/assets/icons/linkedin";
 import Link from "next/link";
-import Hamburger from "@/assets/hamburger";
-import { useState } from "react";
-import NavbarModal from "./modal";
 
-const hamburgerSize = 20;
-const hamburgerColor = "#0f172a";
+const logoSize = 20;
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const links = [
-    { link: "/blogs", title: "Blogs" },
-    { link: "/contact", title: "Contact" },
+    { link: "/blog", title: "Blog" },
+    { link: "/about", title: "About" },
   ];
 
   const homeLink = { link: "/", title: "Stock Sawasdee" };
 
+  const githubLink = "https://github.com/paphopsaw";
+  const linkedinLink = "https://www.linkedin.com/in/paphopsaw/";
+
   return (
-    <nav className="flex justify-between items-center bg-slate-50 text-slate-800 sticky top-0">
-      <Link className="p-2 sm:p-4" href={homeLink.link}>
-        {homeLink.title}
+    <nav className="flex justify-between items-center bg-slate-50 h-12 sm:h-14 text-slate-800 sticky top-0">
+      <Link className="font-bold p-2 sm:p-4" href="/">
+        Stock Sawasdee
       </Link>
-      <div className="flex justify-end items-center h-12 sm:hidden">
-        <button
-          className="p-2 m-2 rounded-lg hover:bg-slate-200"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <Hamburger size={hamburgerSize} color={hamburgerColor}></Hamburger>
-          <NavbarModal links={links} isOpen={isOpen}></NavbarModal>
-        </button>
-      </div>
-      <div className="hidden sm:flex justify-center p-2 sm:p-4 h-14 items-center">
-        <ul className="hidden sm:flex justify-end items-center space-x-10 h-14">
-          {links.map((item) => {
-            return (
-              <li key={item.link}>
-                <Link href={item.link}>{item.title}</Link>
-              </li>
-            );
-          })}
-        </ul>
+      <ul className="flex justify-center items-center space-x-4 sm:space-x-6">
+        {links.map((item) => {
+          return (
+            <li className="hover:underline" key={item.link}>
+              <Link href={item.link}>{item.title}</Link>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="flex justify-end items-center space-x-4 sm:space-x-6 pr-2 sm:pr-4">
+        <Link href={linkedinLink}>
+          <Linkedin size={logoSize} />
+        </Link>
+        <Link href={githubLink}>
+          <Github size={logoSize} />
+        </Link>
       </div>
     </nav>
   );

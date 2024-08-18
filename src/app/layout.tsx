@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`flex flex-col ${inter.className}`}>
         <Navbar></Navbar>
         <div className="flex flex-col justify-center items-center">
-          <div className="w-full max-w-screen-md  px-4 sm:px-8 py-14 sm:py-24">
+          <div className="w-full max-w-screen-md  px-4 sm:px-8 py-8 sm:py-16">
             {children}
           </div>
         </div>

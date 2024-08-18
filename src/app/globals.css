@@ -44,6 +44,6 @@ body {
     @apply text-xl sm:text-2xl;
   }
   p {
-    @apply text-base;
+    @apply text-base sm:text-lg;
   }
 }

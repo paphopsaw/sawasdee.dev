@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="mb-10 sm:mb-12">
       <h1 className="pb-4 sm:pb-8">{greeting}</h1>
-      <h2 className="text-2xl sm:text-3xl">{subtitle}</h2>
+      <h6>{subtitle}</h6>
     </section>
   );
 }

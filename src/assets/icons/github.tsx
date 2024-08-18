@@ -1,6 +1,13 @@
-export default function Github({ size }: { size: number }) {
+export default function Github({
+  className,
+  size,
+}: {
+  className: string;
+  size: number;
+}) {
   return (
     <svg
+      className={className}
       width={`${size.toString()}`}
       height={`${size.toString()}`}
       viewBox="0 0 98 98"

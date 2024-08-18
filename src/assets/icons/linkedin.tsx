@@ -1,6 +1,13 @@
-export default function Linkedin({ size }: { size: number }) {
+export default function Linkedin({
+  className,
+  size,
+}: {
+  className: string;
+  size: number;
+}) {
   return (
     <svg
+      className={className}
       height={`${size.toString()}`}
       viewBox={`0 0 72 72`}
       width={`${size.toString()}`}

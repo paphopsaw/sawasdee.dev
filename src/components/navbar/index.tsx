@@ -17,7 +17,7 @@ export default function Navbar() {
   const linkedinLink = "https://www.linkedin.com/in/paphopsaw/";
 
   return (
-    <nav className="flex justify-between items-center bg-slate-50 h-12 sm:h-14 text-slate-800 sticky top-0">
+    <nav className="flex justify-between items-center bg-slate-50 h-14 sm:h-16 text-slate-800 sticky top-0">
       <Link className="font-bold p-2 sm:p-4" href="/">
         Stock Sawasdee
       </Link>

@@ -3,7 +3,7 @@ export default function Hero() {
   const subtitle = "I'm a software engineer based in Yokohama, Japan.";
   return (
     <section className="mb-10 sm:mb-12">
-      <h1 className="pb-2 sm:pb-4">{greeting}</h1>
+      <h1 className="pb-4 sm:pb-8">{greeting}</h1>
       <h2 className="text-2xl sm:text-3xl">{subtitle}</h2>
     </section>
   );

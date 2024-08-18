@@ -17,7 +17,8 @@ export default function Profile() {
   const experiences = [
     {
       organization: "Studist",
-      title: "Software engineer",
+      title:
+        "Software engineer Software engineerSoftware engineerSoftware engineerSoftware engineerSoftware engineerSoftware engineerSoftware engineer",
       from: new Date(2024, MONTH.AUGUST),
       to: "now",
       description: "dadada",

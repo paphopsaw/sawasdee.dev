@@ -17,21 +17,23 @@ export default function Navbar() {
   const linkedinLink = "https://www.linkedin.com/in/paphopsaw/";
 
   return (
-    <nav className="flex justify-between items-center bg-slate-50 h-14 sm:h-16 text-slate-800 sticky top-0">
-      {/* Home */}
-      <Link className="font-bold p-2 sm:p-4" href="/">
-        Stock Sawasdee
-      </Link>
-      {/* Middle */}
-      <MiddleNav links={links} />
-      {/* Contact */}
-      <div className="flex justify-end items-center space-x-4 sm:space-x-6 pr-2 sm:pr-4">
-        <Link href={linkedinLink}>
-          <Linkedin size={logoSize} />
+    <nav className="flex flex-col justify-center items-center bg-slate-50 h-14 sm:h-16 text-slate-800 sticky top-0">
+      <div className="flex justify-between items-center w-full max-w-screen-md px-4 sm:px-8">
+        {/* Home */}
+        <Link className="font-bold" href="/">
+          Stock Sawasdee
         </Link>
-        <Link href={githubLink}>
-          <Github size={logoSize} />
-        </Link>
+        {/* Middle */}
+        <MiddleNav links={links} />
+        {/* Contact */}
+        <div className="flex justify-end items-center space-x-4 sm:space-x-6">
+          <Link href={linkedinLink}>
+            <Linkedin className="hover:opacity-50" size={logoSize} />
+          </Link>
+          <Link href={githubLink}>
+            <Github className="hover:opacity-50" size={logoSize} />
+          </Link>
+        </div>
       </div>
     </nav>
   );

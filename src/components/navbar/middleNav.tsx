@@ -14,7 +14,7 @@ export default function MiddleNav({
         return (
           <li
             className={`hover:border-b-2 hover:border-slate-400 ${
-              item.link == pathname ? "border-b-2 border-slate-600" : ""
+              pathname.includes(item.link) ? "border-b-2 border-slate-600" : ""
             }`}
             key={item.link}
           >

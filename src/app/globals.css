@@ -2,24 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
-  }
-} */
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-}
-
 @layer base {
+  body {
+    @apply bg-white dark:bg-black text-neutral-900 dark:text-neutral-300;
+  }
+
+  nav {
+    @apply bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-300;
+
+    a {
+      @apply text-neutral-900 dark:text-neutral-300 hover:border-0;
+    }
+  }
+
   h1 {
     @apply text-6xl sm:text-7xl;
   }
@@ -44,6 +39,10 @@ body {
     @apply text-xl sm:text-2xl;
   }
   p {
-    @apply text-base sm:text-lg;
+    @apply text-base sm:text-lg mb-2;
+  }
+  a {
+    @apply text-primary-500  hover:border-b-2 hover:border-primary-500
+      dark:text-secondary-500 dark:hover:border-secondary-500;
   }
 }

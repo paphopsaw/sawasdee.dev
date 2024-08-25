@@ -13,8 +13,10 @@ export default function MiddleNav({
       {links.map((item) => {
         return (
           <li
-            className={`hover:border-b-2 hover:border-slate-400 ${
-              pathname.includes(item.link) ? "border-b-2 border-slate-600" : ""
+            className={`hover:border-b-2 hover:border-neutral-400 ${
+              pathname.includes(item.link)
+                ? "border-b-2 border-neutral-600"
+                : ""
             }`}
             key={item.link}
           >

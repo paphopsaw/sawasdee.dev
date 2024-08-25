@@ -17,7 +17,7 @@ export default function Navbar() {
   const linkedinLink = "https://www.linkedin.com/in/paphopsaw/";
 
   return (
-    <nav className="flex flex-col justify-center items-center bg-slate-50 h-14 sm:h-16 text-slate-800 sticky top-0">
+    <nav className="flex flex-col justify-center items-center h-14 sm:h-16 sticky top-0">
       <div className="flex justify-between items-center w-full max-w-screen-md px-4 sm:px-8">
         {/* Home */}
         <Link className="font-bold" href="/">
@@ -31,7 +31,10 @@ export default function Navbar() {
             <Linkedin className="hover:opacity-50" size={logoSize} />
           </Link>
           <Link href={githubLink}>
-            <Github className="hover:opacity-50" size={logoSize} />
+            <Github
+              className="dark:fill-white hover:opacity-50"
+              size={logoSize}
+            />
           </Link>
         </div>
       </div>

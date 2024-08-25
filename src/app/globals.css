@@ -16,30 +16,33 @@
   }
 
   h1 {
-    @apply text-6xl sm:text-7xl;
+    @apply text-4xl sm:text-5xl mb-8 font-bold;
   }
 
   h2 {
-    @apply text-5xl sm:text-6xl;
+    @apply text-2xl sm:text-3xl mb-4 font-bold;
   }
 
   h3 {
-    @apply text-4xl sm:text-5xl;
-  }
-  h4 {
-    @apply text-4xl sm:text-5xl;
-  }
-  h5 {
-    @apply text-3xl sm:text-4xl;
-  }
-  h6 {
-    @apply text-2xl sm:text-3xl;
-  }
-  button {
     @apply text-xl sm:text-2xl;
   }
+  h4 {
+    @apply text-base sm:text-lg;
+  }
+  h5 {
+    @apply text-sm sm:text-base;
+  }
+  h6 {
+    @apply text-xs sm:text-sm;
+  }
+  button {
+    @apply text-lg sm:text-xl;
+  }
   p {
-    @apply text-base sm:text-lg mb-2;
+    @apply text-base sm:text-lg mb-4;
+  }
+  li {
+    @apply text-base sm:text-lg;
   }
   a {
     @apply text-primary-500  hover:border-b-2 hover:border-primary-500

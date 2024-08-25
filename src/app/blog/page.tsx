@@ -16,7 +16,7 @@ export default async function Blog() {
 
   return (
     <div>
-      <h3>Posts</h3>
+      <h1>My Blog</h1>
       <ul>
         {postDirs.map(async (postDir) => {
           const { metadata } = await import(

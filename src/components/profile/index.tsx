@@ -6,7 +6,6 @@ type Job = {
   organizationLink: string;
   from: Date;
   to: Date | string;
-  descriptions: string[];
 };
 
 import { MONTH } from "@/utils/constants";
@@ -19,7 +18,6 @@ function renderYearMonth(date: Date | string): string {
 }
 
 export default function Profile() {
-  // TODO: Write descriptions
   const jobs: Job[] = [
     {
       title: "Software engineer",
@@ -27,7 +25,6 @@ export default function Profile() {
       organizationLink: "https://studist.jp/",
       from: new Date(2023, MONTH.AUGUST),
       to: "present",
-      descriptions: ["Design 1", "Implement 2"],
     },
     {
       title: "Geophysicist",
@@ -35,7 +32,6 @@ export default function Profile() {
       organizationLink: "https://www.pttep.com",
       from: new Date(2018, MONTH.JULY),
       to: new Date(2023, MONTH.JULY),
-      descriptions: ["Design 1", "Implement 2"],
     },
   ];
   return (
@@ -69,7 +65,7 @@ export default function Profile() {
         </p>
       </div>
       <div className="mb-6">
-        <h2>Experience</h2>
+        <h2>Career history</h2>
         {jobs.map((job) => (
           <div className="mb-2" key={job.title}>
             <h3>
@@ -78,27 +74,11 @@ export default function Profile() {
                 {job.organization}
               </Link>
             </h3>
-            <p className="mb-3 italic">{`${renderYearMonth(
+            <p className="mb-2 italic">{`${renderYearMonth(
               job.from
             )} - ${renderYearMonth(job.to)}`}</p>
-            <ul className="ml-6 list-disc">
-              {job.descriptions?.map((description) => (
-                <li key={description}>{description}</li>
-              ))}
-            </ul>
           </div>
         ))}
-      </div>
-      <div className="mb-6">
-        <h2 className="mb-4">Skills</h2>
-        <div>
-          <h3>Programming Languages</h3>
-          <p>Python, JavasScript, TypeScript, Ruby, C++, Java</p>
-        </div>
-        <div>
-          <h3>Libraries / Frameworks</h3>
-          <p>Numpy, OpenCV, React, NextJS, VueJS, Rails, Django, FastAPI</p>
-        </div>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import PostListItem from "@/components/blog/postListItem";
 
 const POSTS_ROOT_DIR = path.join(
   process.cwd(),
@@ -25,10 +26,12 @@ export default async function Blog() {
 
           return (
             <li key={postDir}>
-              <Link href={`blog/${postDir}`}>
-                <h4>{metadata.title}</h4>
-                <p>{metadata.description}</p>
-              </Link>
+              <PostListItem
+                postDir={postDir}
+                title={metadata.title}
+                description={metadata.description}
+                date={metadata.date}
+              />
             </li>
           );
         })}
